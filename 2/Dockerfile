@@ -19,7 +19,7 @@ WORKDIR /prometheus
 
 EXPOSE 9090
 
-COPY ./docker-entrypoint.sh /bin/docker-entrypoint.sh
+COPY 2/docker-entrypoint.sh /bin/docker-entrypoint.sh
 ENTRYPOINT ["/bin/docker-entrypoint.sh"]
 CMD [ "--config.file=/etc/prometheus/prometheus.yml", \
       "--storage.tsdb.path=/prometheus" ]
