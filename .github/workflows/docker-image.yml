@@ -12,6 +12,8 @@ jobs:
     strategy:
       matrix:
         versions: [latest, 2]
+    env:
+      repo: "govpf/prometheus"
     steps:
     -
       name: Checkout
@@ -35,11 +37,11 @@ jobs:
         pull: true
         push: true
         tags: |
-          govpf/prometheus:${{ matrix.versions }}
+          ${{ env.repo }}:${{ matrix.versions }}
 
     - name: Update repo description
       uses: peter-evans/dockerhub-description@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        repository: govpf/prometheus
+        repository: "${{ env.repo }}"
