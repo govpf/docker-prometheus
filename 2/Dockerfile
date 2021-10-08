@@ -1,6 +1,6 @@
 FROM prom/prometheus:v2.21.0
 
-FROM alpine:3.12.7
+FROM alpine:latest
 
 RUN apk add gettext
 
