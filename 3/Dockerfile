@@ -17,7 +17,7 @@ WORKDIR /prometheus
 
 EXPOSE 9090
 
-COPY --chown=nobody:nogroup 2/docker-entrypoint.sh /bin/docker-entrypoint.sh
+COPY --chown=nobody:nogroup 3/docker-entrypoint.sh /bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/bin/docker-entrypoint.sh"]
 
