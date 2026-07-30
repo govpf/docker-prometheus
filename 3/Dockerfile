@@ -21,7 +21,4 @@ COPY --chown=nobody:nogroup 2/docker-entrypoint.sh /bin/docker-entrypoint.sh
 
 ENTRYPOINT ["/bin/docker-entrypoint.sh"]
 
-CMD [
-  "--config.file=/etc/prometheus/prometheus.yml",
-  "--storage.tsdb.path=/prometheus"
-]
+CMD ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus"]
