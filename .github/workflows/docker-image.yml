@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        versions: [latest, 2, 3]
+        versions: [latest, 3]
     env:
       repo: "govpf/prometheus"
     steps:
