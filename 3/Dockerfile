@@ -1,4 +1,4 @@
-FROM prom/prometheus:v3.6.0
+FROM prom/prometheus:v3
 
 FROM alpine:3.22
 
