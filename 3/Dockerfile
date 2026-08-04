@@ -2,6 +2,9 @@ FROM prom/prometheus:v3
 
 FROM alpine:3.22
 
+LABEL govpf.category="observability"
+LABEL govpf.fromimage="prom/prometheus:v3"
+
 RUN apk add --no-cache gettext
 
 RUN mkdir -p /prometheus /etc/prometheus \
